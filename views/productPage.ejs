@@ -1,0 +1,51 @@
+<%- include('partials/header'); -%>
+<div id="productPage">
+    <div class="pageCont">
+        <img src="/<%=product%>.jpg" alt="image of <%=product%>" class="productPageImg">
+    </div>
+    <div class="pageCont">
+        <h1><%=product%></h1>
+        <div class="description">
+            <p><%=productCat.description%></p>
+        </div>
+        <p>4.0⭐⭐⭐⭐  <span>55,889 ratings</span></p>
+        <hr>
+        <p><span class="discount">-50%</span>  ₹<span class="price"><%=productCat.price%></span></p>
+        <p>Inclusive of all taxes</p>
+        <hr>
+        <div class="offers">
+            <img src="/offers.png" alt="">
+            <h2>Offers</h2>
+        </div>
+        <div class="offers">
+        <div class="off">
+            <p class="offTitle">Partner Offers</p>
+            <p class="offDes">Get GST invoice and save up to 28% on business purchases.</p>
+        </div>
+        <div class="off">
+            <p class="offTitle">Bank Offer</p>
+            <p class="offDes">Prime Savings Additional INR 250 Discount with AmazonPa..</p>
+        </div>
+        <div class="off">
+            <p class="offTitle">No Cost EMI</p>
+            <p class="offDes">To make this a No Cost EMI offer, interest amount will...</p>
+        </div>
+    </div>
+    <hr>
+    <div class="res">
+        <div><img src="/cod.png" alt="">
+        <p>Cash on delivery</p>
+        </div>
+        <div><img src="/shipping.png" alt="">
+        <p>Free shipping</p>
+        </div>
+        <div><img src="/top-brand.png" alt="">
+        <p>Top-brand</p>
+        </div>
+        <div><img src="/returns.png" alt="">
+        <p>Easy returns</p>
+        </div>
+    </div>
+    </div>
+</div>
+<%- include('partials/footer'); -%>
