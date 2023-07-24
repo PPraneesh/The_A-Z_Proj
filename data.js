@@ -147,11 +147,11 @@ var laptops = [
       price: 85462,
       img: "Logitech Keyboard.jpg",
       description: "Full-size wired keyboard with comfortable typing experience. Spill-resistant design for added durability. Adjustable tilt legs for ergonomic typing position."
-    },
+    }
   ];
   
     module.exports = {
         mobiles: mobiles,
         laptops: laptops,
-        accessories: accessories,
+        accessories: accessories
         };
