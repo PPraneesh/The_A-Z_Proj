@@ -1,6 +1,6 @@
 <%- include('partials/header'); -%>
 <div class="productsCont">
-<% for(let i =0; i<products.length;i++){%>
+<% for(let i =0; i< products.length;i++){%>
     <div class="product">
         <img class="productImg" src="/<%= products[i].img%>" alt="product image">
         <a href="/<%=productCat%>/<%= products[i].name%>">

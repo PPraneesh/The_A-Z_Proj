@@ -75,7 +75,7 @@ ul{
 }
 .product:hover{
     border: 0.1rem solid #232f3e;
-    box-shadow: 0.2rem 0.2rem 0.2rem 0.1rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0.4rem 0.4rem 0.4rem 0.1rem rgba(0, 0, 0, 0.2);
 }
 .productImg{
     height: 10rem;
@@ -137,9 +137,8 @@ li{
 }
 #navBar{
     display: flex;
-    /* justify-content: space-between; */
     background-color:#131921 ;
-    padding: 0.5rem 1rem 0 1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
 }
 #navBar div{
     height: 3rem;
@@ -155,8 +154,10 @@ li{
     border-radius: 0.3rem;
 }
 #searchCol{
-    flex-grow: 1;
     padding: 0 1rem 0 0;
+}
+form{
+    flex-grow: 1;
 }
 #search{
     height: 2rem;
