@@ -202,4 +202,8 @@ color: #e0e0e0;
     label{
         font-size: 0.8rem;
     }
+    #productPage{
+    flex-direction: column;
+    align-items: center;
+    }
 }
