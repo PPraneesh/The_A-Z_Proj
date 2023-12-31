@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A to Z</title>
+    <link rel="icon" type="image/x-icon" href="/css/image.ico">
+    <link rel="stylesheet" href="/css/homePage.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav id="navBar">
+      <div>
+        <h1 class="light">A to Z</h1>
+      </div>
+      <div id="address" class="light">
+        <label for="pinCode">Hello, Enter your pincode</label>
+        <input type="number" name="pinCode"id="pinCode" placeholder="pincode">
+      </div>
+      <!-- functionality for search -->
+      <form action="/home" method="post">
+        <div id="searchCol">
+          <input type="text" name="search" placeholder="search" id="search" />
+          <button type="submit">🔍</button>
+        </div>
+      </form>
+        <div class="light">
+          <h2>Hello, <%=name%></h2>
+        </div>
+        <div id="cart">
+          <button type="menu"><a href="/logout">logout</a></button>
+        </div>
+    </nav>
+
+    <nav id="navBar2">
+        <div class="categories">
+          <a href="/home" class="light">Home</a>
+          <a href="/bestSellers" class="bestSellers light">Best sellers</a>
+          <a href="/mobiles" class="mobiles light">Mobiles</a>
+          <a href="/laptops" class="laptops light">Laptops</a>
+          <a href="/accessories" class="accessories light">Accessories</a>
+        </div>
+    </nav>
+

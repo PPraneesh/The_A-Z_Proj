@@ -1,0 +1,53 @@
+input {
+  display: block;
+}
+h1{
+    margin: 0.8rem 0;
+    font-family: 'Lato', sans-serif;
+}
+button, input, label{
+    font-family: 'Roboto', sans-serif;
+}
+input{
+    margin-bottom: 0.4rem ;
+    width: 98%;
+}
+.loginbtns{
+    display: flex;
+    flex-direction: column;
+
+}
+.card:hover{
+    background-color:rgb(136, 137, 138);
+}
+.card{
+    margin: 1rem 0.5rem;
+    border: 1px solid black;
+}
+button{
+    background-color: rgba(255, 214, 11, 0.936);
+    border: 0;
+    border-radius: 0.4rem;
+    width: 100%;
+}
+#login_form{
+border: 1px solid black;
+border-radius: 0.8rem;
+padding: 0.6rem 1rem; 
+width: 20%;
+}
+.form_cont{
+    display: flex;
+    justify-content: center;
+}
+button:hover{
+    background-color: rgba(233, 196, 10, 0.865);
+
+}
+@media screen and (max-width: 768px){
+    #login_form{
+        width: 50%;
+    }
+}
+/* font-family: 'Lato', sans-serif;
+font-family: 'Roboto', sans-serif; */
