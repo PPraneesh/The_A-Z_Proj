@@ -30,7 +30,7 @@ var arr = [mobiles,laptops,accessories];
 var s =["mobiles","laptops","accessories"]
 var cart=[];
 var product;
-
+var userInterests =[]
 app.use(session({
   secret: 'our littel secret.',
   resave: false,
@@ -169,28 +169,42 @@ app.post("/home", (req, res) => {
   }
 })
 app.get("/mobiles", (req, res) => {
+  if(req.isAuthenticated()){
   res.render("productCategory", {
     name:name,
     products: mobiles,
     productCat: "mobiles"
   });
+}else{
+  res.redirect("/login")
+}
 });
 app.get("/laptops", (req, res) => {
+
+  if(req.isAuthenticated()){
   res.render("productCategory", {
     name:name,
     products: laptops,
     productCat: "laptops"
   });
+}else{
+  res.redirect("/login")
+}
 });
 app.get("/accessories", (req, res) => {
 
+  if(req.isAuthenticated()){
   res.render("productCategory", {
     name:name,
     products: accessories,
     productCat: "accessories"
   });
+}else{
+  res.redirect("/login")
+}
 });
 app.get("/:productCat/:product", (req, res) => {
+  if(req.isAuthenticated()){
   for(let i = 0; i < s.length; i++){
     if( req.params.productCat === s[i]){
       product = data[s[i]];
@@ -202,11 +216,16 @@ app.get("/:productCat/:product", (req, res) => {
       }
     }
     };
+    userInterests.push(product)
+    console.log((userInterests))
+
     res.render("productPage", {
       name:name,
-      product: req.params.product,
+      product: product,
       productCat: product
     });
+  }else
+  res.redirect("/login")
   });
 app.post("/cart",(req,res)=>{
     cart.push(product);
@@ -214,11 +233,15 @@ app.post("/cart",(req,res)=>{
     res.redirect("/home");
   })
 app.get("/bestSellers", (req, res) => {
+  if(req.isAuthenticated()){
   res.render("bestSellers", {
     name:name,
     products: [mobiles,laptops,accessories],
     s :s
-  }); 
+  });
+}else{
+  res.redirect("/login")
+}
 });
 
 

@@ -12,18 +12,6 @@ input{
     margin-bottom: 0.4rem ;
     width: 98%;
 }
-.loginbtns{
-    display: flex;
-    flex-direction: column;
-
-}
-.card:hover{
-    background-color:rgb(136, 137, 138);
-}
-.card{
-    margin: 1rem 0.5rem;
-    border: 1px solid black;
-}
 button{
     background-color: rgba(255, 214, 11, 0.936);
     border: 0;
