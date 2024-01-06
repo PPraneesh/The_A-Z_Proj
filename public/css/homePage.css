@@ -1,0 +1,221 @@
+body{
+    margin: 0;
+}
+h1{
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    font-size: 2rem;
+}
+h2{
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    font-size: 1rem;
+}
+.light{
+    color: aliceblue;
+}
+label,a, p,li, input{
+    font-family: 'Roboto', sans-serif;
+}
+ul{
+    margin: 0;
+    list-style: none;
+}
+.productsCont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    border: 0.1rem solid #e0e0e0;
+    border-radius: 0.5rem;
+    width: 15rem;
+    height: 20rem;
+}
+.description p{
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+}
+.strike{
+    text-decoration: line-through;
+}
+.product a{
+    color: #232f3e;
+}
+.product h1{
+    font-size: 1.75rem;
+    margin: 0.5rem 0;   
+    text-align: center;
+    font-weight: bold;
+}
+.product h2{
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    text-align: center;
+    font-weight: bold;
+    display: inline;
+}
+.product p{
+    display: inline;
+}
+.prime_logo{
+    width: 3rem;
+    padding-top: 0.5rem;
+}
+.product:hover{
+    border: 0.1rem solid #717171cf;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+.productImg{
+    height: 10rem;
+    object-fit: cover;
+}
+.productPageImg{
+    width: 20rem;
+}
+.price{
+    font-size: 2rem;
+    font-weight: bold;
+}
+.discount{
+    font-size: 2rem;
+    color: rgb(194, 4, 4);
+}
+.offers{
+    display: flex;
+    align-items: center;
+}
+.off{
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    margin: 0.3rem;
+    width: 20%;
+    padding: 0.3rem 0.6rem;
+    flex: 1; 
+}
+.offTitle{
+    font-weight: bold;
+}
+.offers h2{
+    margin-left: 0.5rem;
+}
+.offers img{
+    width: 2rem;
+    height: 2rem;
+}
+.res{
+    display: flex;
+    justify-content: space-around;
+}
+.res div{
+   text-align: center;
+}
+#productPage{
+    display: flex;
+}
+.pageCont{
+    margin: 2rem 4rem;
+}
+#productPage h1{
+    font-size:  2.25rem;
+}
+a{
+    text-decoration: none;
+}
+li{
+    display: inline;
+}
+#navBar{
+    display: flex;
+    justify-content: space-around;
+    background-color:#131921 ;
+    padding: 0.5rem 0rem 0.5rem 1rem;
+}
+#navBar div{
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem 0 0 ;
+}
+#nav h2{
+    font-size: 1.7rem;
+}
+#address{
+    flex-direction: column;
+}
+#pinCode{
+    width: auto;
+    border-radius: 0.3rem;
+}
+
+form{
+    flex-grow: 1;
+}
+#search{
+    height: 2rem;
+    width: 95%;
+    padding: 0 0 0 0.5rem;
+    border: 0;
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+}
+#searchCol button{
+    height: 2rem;
+    width:auto;
+    padding:  0;
+    border-top:0;
+    border-bottom:0;
+    border-right:0;
+    border-top-right-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}
+
+#navBar2{
+    background-color:#232f3e ; 
+}
+.categories{
+    display: flex;
+    justify-content: space-around;
+}
+.categories a:hover{
+border: 1px solid #e0e0e0;
+color: #e0e0e0;
+}
+.categories a{
+    border:1px solid #232f3e;
+    text-align: center;
+    width: 24%;
+    padding: 0.3rem;
+}
+@media (max-width:780px) {
+    h1,h2{
+        font-size: 1.3rem;
+    }
+    label{
+        font-size: 0.8rem;
+    }
+    #productPage{
+    flex-direction: column;
+    align-items: center;
+    }
+}
+@media (max-width:500px) {
+    form{
+        order: 4;
+        display: block;
+    }
+    #navBar{
+        flex-wrap: wrap;
+    }
+    .categories a {
+        font-size: 1rem;
+    }
+}
