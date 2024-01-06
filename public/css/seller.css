@@ -1,0 +1,41 @@
+div{
+    border: 1px solid black;
+}
+.navbar{
+display: flex;
+flex-direction: row;
+}
+.yourProd{
+    display: flex;
+}
+.product{
+    padding: 1rem;  
+}
+h1,h2,label{
+    font-family: 'Lato', sans-serif;
+}
+.newProd{
+    padding: 2rem 1rem;
+}
+label{
+    font-size: 1rem;
+    display: block;
+    font-weight: bold;
+}
+input{
+    height: 1rem;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+}
+button{
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.profile{
+    padding: 2rem 1rem;
+}
+/* font-family: 'Lato', sans-serif;
+font-family: 'Roboto', sans-serif; */

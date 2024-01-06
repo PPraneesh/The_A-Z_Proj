@@ -14,9 +14,6 @@ h2{
 .light{
     color: aliceblue;
 }
-.light h2{
-    font-size:1.5rem ;
-}
 label,a, p,li, input{
     font-family: 'Roboto', sans-serif;
 }
@@ -74,8 +71,8 @@ ul{
     padding-top: 0.5rem;
 }
 .product:hover{
-    border: 0.1rem solid #232f3e;
-    box-shadow: 0.4rem 0.4rem 0.4rem 0.1rem rgba(0, 0, 0, 0.2);
+    border: 0.1rem solid #717171cf;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 .productImg{
     height: 10rem;
@@ -102,6 +99,7 @@ ul{
     margin: 0.3rem;
     width: 20%;
     padding: 0.3rem 0.6rem;
+    flex: 1; 
 }
 .offTitle{
     font-weight: bold;
@@ -137,14 +135,18 @@ li{
 }
 #navBar{
     display: flex;
+    justify-content: space-around;
     background-color:#131921 ;
-    padding: 0.5rem 1rem 0.5rem 1rem;
+    padding: 0.5rem 0rem 0.5rem 1rem;
 }
 #navBar div{
     height: 3rem;
     display: flex;
     align-items: center;
     padding: 0 1rem 0 0 ;
+}
+#nav h2{
+    font-size: 1.7rem;
 }
 #address{
     flex-direction: column;
@@ -153,9 +155,7 @@ li{
     width: auto;
     border-radius: 0.3rem;
 }
-#searchCol{
-    padding: 0 1rem 0 0;
-}
+
 form{
     flex-grow: 1;
 }
@@ -196,8 +196,8 @@ color: #e0e0e0;
     padding: 0.3rem;
 }
 @media (max-width:780px) {
-    h1{
-        font-size: 1rem;
+    h1,h2{
+        font-size: 1.3rem;
     }
     label{
         font-size: 0.8rem;
@@ -205,5 +205,17 @@ color: #e0e0e0;
     #productPage{
     flex-direction: column;
     align-items: center;
+    }
+}
+@media (max-width:500px) {
+    form{
+        order: 4;
+        display: block;
+    }
+    #navBar{
+        flex-wrap: wrap;
+    }
+    .categories a {
+        font-size: 1rem;
     }
 }

@@ -2,20 +2,20 @@
 <div id="productPage">
   <div class="pageCont">
     <img
-      src="/<%=product%>.jpg"
+      src="/<%=product.img%>"
       alt="image of <%=product%>"
       class="productPageImg"
     />
   </div>
   <div class="pageCont">
-    <h1><%=product%></h1>
+    <h1><%=product.name%></h1>
     <div class="description">
-      <p><%=productCat.description%></p>
+      <p><%=product.description%></p>
     </div>
     <p>4.0⭐⭐⭐⭐ <span>55,889 ratings</span></p>
     <hr />
     <p>
-      <span class="discount">-50%</span> ₹<span class="price"><%=productCat.price%></span>
+      <span class="discount">-50%</span> ₹<span class="price"><%=product.price%></span>
     </p>
     <p>Inclusive of all taxes</p>
     <hr />
