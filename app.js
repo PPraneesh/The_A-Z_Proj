@@ -252,5 +252,5 @@ app.post("/", (req, res) => {
 });
 
 app.listen(3000, () => {
-  console.log("on port 3K");
+  console.log("on port 3000");
 });
