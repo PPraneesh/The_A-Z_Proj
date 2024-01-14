@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require('mongoose')
-require('dotenv').config() // you are requiring dot env files 
+require('dotenv').config() 
 
 const session =  require('express-session') // sessions
 const passport = require('passport') // passport 
