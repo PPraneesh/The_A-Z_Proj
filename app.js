@@ -2,11 +2,11 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require('mongoose')
-require('dotenv').config()
+require('dotenv').config() // you are requiring dot env files 
 
-const session =  require('express-session')
-const passport = require('passport')
-const passportLocalMongoose = require('passport-local-mongoose')
+const session =  require('express-session') // sessions
+const passport = require('passport') // passport 
+const passportLocalMongoose = require('passport-local-mongoose') 
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const findOrCreate = require('mongoose-findorcreate')
 
@@ -15,6 +15,7 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
+// website's data
 app.use(express.static("public"));
 app.use(express.static("mobilesImg"));
 app.use(express.static("laptopImg"));
@@ -28,11 +29,16 @@ const accessories = data.accessories;
 var name = "Guest";
 var arr = [mobiles,laptops,accessories];
 var s =["mobiles","laptops","accessories"]
+// website's data
+
 var cart=[];
 var product;
+
 var userInterests =[]
+
+// sessions starts
 app.use(session({
-  secret: 'our littel secret.',
+  secret: 'our little secret.',
   resave: false,
   saveUninitialized: false
 }))
@@ -61,8 +67,7 @@ passport.serializeUser(function(user, cb) {
   process.nextTick(function() {
     return cb(null, {
       id: user.id,
-      username: user.username,
-      picture: user.picture
+      username: user.username
     });
   });
 });
@@ -81,7 +86,7 @@ passport.use(new GoogleStrategy({
 },
 function(accessToken, refreshToken, profile, cb) {
   name = profile.displayName;
-  User.findOrCreate({ googleId: profile.id }, function (err, user) {
+  User.findOrCreate({ username: profile.displayName,googleId: profile.id }, function (err, user) {
     return cb(err, user);
   });
 }
