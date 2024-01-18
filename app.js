@@ -222,7 +222,7 @@ app.get("/:productCat/:product", (req, res) => {
     }
     };
     userInterests.push(product)
-    console.log((userInterests))
+    console.log("user interests are "+(userInterests))
 
     res.render("productPage", {
       name:name,
@@ -234,7 +234,7 @@ app.get("/:productCat/:product", (req, res) => {
   });
 app.post("/cart",(req,res)=>{
     cart.push(product);
-    console.log(cart)
+    console.log("cart"+cart)
     res.redirect("/home");
   })
 app.get("/bestSellers", (req, res) => {
